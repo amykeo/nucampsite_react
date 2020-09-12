@@ -8,6 +8,8 @@ import {
   CardTitle,
 } from "reactstrap";
 
+import CampsiteInfo from "./CampsiteInfoComponent";
+
 class Directory extends Component {
   constructor(props) {
     super(props);
@@ -20,6 +22,7 @@ class Directory extends Component {
     this.setState({ selectedCampsite: campsite });
   }
 
+  /* delete this function
   renderSelectedCampsite(campsite) {
     if (campsite) {
       return (
@@ -34,6 +37,7 @@ class Directory extends Component {
     }
     return <div />;
   }
+  */
 
   render() {
     const directory = this.props.campsites.map((campsite) => {
@@ -52,11 +56,16 @@ class Directory extends Component {
     return (
       <div className="container">
         <div className="row">{directory}</div>
+
+        <CampsiteInfo campsite={this.state.selectedCampsite} />
+
+        {/* delete
         <div className="row">
           <div className="col-md-5 m-1">
             {this.renderSelectedCampsite(this.state.selectedCampsite)}
           </div>
         </div>
+        */}
       </div>
     );
   }
