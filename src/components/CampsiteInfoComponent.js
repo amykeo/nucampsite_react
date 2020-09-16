@@ -52,18 +52,16 @@ class CampsiteInfo extends Component {
   }
 
   render() {
-    // check if object, campsite, is truthy
-    // are there any properties in the campsite object?
     if (this.props.campsite) {
       return (
-        <div className="row">
-          {this.renderCampsite(this.props.campsite)}
-
-          {this.renderComments(this.props.campsite.comments)}
+        <div className="container">
+          <div className="row">
+            {this.renderCampsite(this.props.campsite)}
+            {this.renderComments(this.props.campsite.comments)}
+          </div>
         </div>
       );
     }
-
     return <div />;
   }
 }
