@@ -34,6 +34,9 @@ function RenderPartner({ partner }) {
       </React.Fragment>
     );
   }
+
+  // in REACT, must return JSX
+  return <div />;
 }
 
 function About(props) {
