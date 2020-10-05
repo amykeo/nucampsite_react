@@ -34,7 +34,7 @@
     "eject": "react-scripts eject",
     "predeploy": "yarn run build",
     "deploy": "gh-pages -d build",
-    "homepage": "https://https://amykeo.github.io/nucampsite_react/"
+    "homepage": "https://amykeo.github.io/nucampsite_react/"
   },
   "eslintConfig": {
     "extends": "react-app"
