@@ -32,9 +32,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "homepage": "https://amykeo.github.io/nucampsite_react/",
     "predeploy": "yarn run build",
-    "deploy": "gh-pages -d build",
-    "homepage": "https://amykeo.github.io/nucampsite_react/"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
