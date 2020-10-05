@@ -1,5 +1,9 @@
 import * as ActionTypes from "./ActionTypes";
 import { baseUrl } from "../shared/baseUrl";
+import { CAMPSITES } from "../shared/campsites";
+import { COMMENTS } from "../shared/comments";
+import { PROMOTIONS } from "../shared/promotions";
+import { PARTNERS } from "../shared/partners";
 
 export const fetchComments = () => (dispatch) => {
   return fetch(baseUrl + "comments")
@@ -22,7 +26,7 @@ export const fetchComments = () => (dispatch) => {
     )
     .then((response) => response.json())
     .then((comments) => dispatch(addComments(comments)))
-    .catch((error) => dispatch(commentsFailed(error.message)));
+    .catch(() => dispatch(addComments(COMMENTS)));
 };
 
 export const commentsFailed = (errMess) => ({
@@ -105,7 +109,7 @@ export const fetchCampsites = () => (dispatch) => {
     )
     .then((response) => response.json())
     .then((campsites) => dispatch(addCampsites(campsites)))
-    .catch((error) => dispatch(campsitesFailed(error.message)));
+    .catch(() => dispatch(addCampsites(CAMPSITES)));
 };
 
 export const campsitesLoading = () => ({
@@ -147,7 +151,7 @@ export const fetchPromotions = () => (dispatch) => {
     )
     .then((response) => response.json())
     .then((promotions) => dispatch(addPromotions(promotions)))
-    .catch((error) => dispatch(promotionsFailed(error.message)));
+    .catch(() => dispatch(addPromotions(PROMOTIONS)));
 };
 
 export const promotionsLoading = () => ({
@@ -189,7 +193,7 @@ export const fetchPartners = () => (dispatch) => {
     )
     .then((response) => response.json())
     .then((partners) => dispatch(addPartners(partners)))
-    .catch((error) => dispatch(partnersFailed(error.message)));
+    .catch(() => dispatch(addPartners(PARTNERS)));
 };
 
 export const partnersLoading = () => ({
